@@ -1,0 +1,257 @@
+/* General styling */
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header styling with missing alignment */
+.header {
+    background-color: #222;
+    color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #00ff7f;
+}
+
+.header h1 {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+/* Navigation styling missing completely */
+nav{
+    display: flex;
+    gap:1.5rem
+}
+
+nav a{
+    color: #f0f0f0;
+    text-align: right;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Pseudo-classes*/
+nav a:active {
+  color: #00ff7f;
+}
+
+/*About styling*/
+#background {
+    padding: 50px;
+    color: #ffffff;
+    background-color: #333;
+    border: 2px solid #00ff7f;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Combination selectors*/
+#background p + h2 {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+#my-photo {
+    background-color: #333;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 50px;
+    margin: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #background {
+    padding: 20px;
+  }
+}
+
+/* Hero styling*/
+.hero {
+    padding: 50px;
+    background-size:auto;
+    background-position: center;
+    color: #333;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Intro styling*/
+.intro {
+    padding: 30px;
+    background-color: #444;
+    color: #ffffff;
+}
+/* Form styling with hover effect */
+form {
+    max-width: 600px;
+    margin: 20px auto 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #00ff7f;
+}
+
+form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-bottom: 2px solid#00ff7f;
+    padding-bottom: 5px;
+}
+
+form h3{
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+form input,
+form textarea,
+form select {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #00ff7f;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #00ff7f;
+    box-shadow: 0 2px 8px #00ff7f;
+}
+
+/* Grid layout for communication type option */
+#communication-type{
+    display: inline-grid;
+    grid-template-columns: 0fr 1fr;
+    border: none;
+}
+
+/* Button styling with hover effect */
+form button {
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #00ff7f;
+}
+
+/* Box model demonstration (margin, padding, border) */
+.box-demo {
+  margin: 20px;
+  padding: 10px;
+  border: 3px solid #006d5b;
+  background-color: #f9f9f9;
+}
+
+/* Block vs inline elements */
+.block-example {
+  display: block;
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.inline-example {
+  display: inline;
+  color: #f4ce14;
+  font-weight: bold;
+  border-bottom: 2px dashed #f4ce14;
+}
+
+
+/* Table styling with hover effect */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #222222;
+    padding: 8px;
+    text-align: left;
+}
+
+thead{
+    color: #ffffff;
+    background-color: grey;
+}
+
+tbody tr:hover {
+  background-color: #e6ffe6;
+  color: #222;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Projects section styling */
+.projects {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects img {
+    border: 2px solid #00ff7f;
+    transition: transform 0.3s ease;
+}
+
+/*  Text and colour styling variety */
+h1, h2{
+  text-transform: uppercase;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+p {
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Footer styling with incorrect alignment */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    /* Wrong alignment */
+    text-align: center;
+}
