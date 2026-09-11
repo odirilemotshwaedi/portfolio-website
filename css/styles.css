@@ -154,7 +154,7 @@ form select {
     box-sizing: border-box;
 }
 
-/*Form fu=ocus styles*/
+/*Form focus styles*/
 input:focus,
 textarea:focus,
 select:focus {

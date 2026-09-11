@@ -45,15 +45,15 @@
                 required
             ></textarea>
 
-            <label for="Phone">Phone/Whatsapp Number</label>
+            <label for="tel">Phone/Whatsapp Number</label>
             <input
                 type="tel"
-                id="Phone"
+                id="tel"
                 placeholder="Number"
                 pattern="^\+?[0-9\s\-]{7,15}$"
                 required
             >
-            <!-- Missing: labels, more input types, validation -->
+            <!--more input types, validation -->
 
             <label for="Art" >Service Request</label>
             <select id="Art" name="Art" required>
@@ -63,6 +63,7 @@
                 <option value="Mentorship">Mentorship</option>
             </select>
 
+            <!--Radio box for method of communication-->
             <h3>Preferred method of communication</h3>
             <fieldset id="communication-type">
                 <input type="radio" name="communication" id="email" value="email" checked>
