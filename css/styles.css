@@ -10,11 +10,11 @@ body {
 .header {
     background-color: #222;
     color: #f0f0f0;
-    padding: 20px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #00ff7f;
+    border-bottom: 3px solid #00cc66;
 }
 
 .header h1 {
@@ -25,7 +25,9 @@ body {
 /* Navigation styling missing completely */
 nav{
     display: flex;
-    gap:1.5rem
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav a{
@@ -33,13 +35,13 @@ nav a{
     text-align: right;
     text-decoration: none;
     transition: color 0.3s ease;
-    padding: 5px 10px;
+    padding: 10px 14px;
     border-radius: 4px;
 }
 
 /* Pseudo-classes*/
 nav a:active {
-  color: #00ff7f;
+  color: #00994d;
 }
 
 /*About styling*/
@@ -47,7 +49,7 @@ nav a:active {
     padding: 50px;
     color: #ffffff;
     background-color: #333;
-    border: 2px solid #00ff7f;
+    border: 2px solid #00cc66;
     border-radius: 10px;
     margin: 20px;
 }
@@ -75,10 +77,11 @@ nav a:active {
 
 /* Hero styling*/
 .hero {
-    padding: 50px;
-    background-size:auto;
-    background-position: center;
-    color: #333;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #111;
 }
 
 .hero h2 {
@@ -90,6 +93,7 @@ nav a:active {
     width: 100%;
     display: block;
     margin: 0 auto;
+    max-width: 800px;
 }
 
 /* Intro styling*/
@@ -97,28 +101,36 @@ nav a:active {
     padding: 30px;
     background-color: #444;
     color: #ffffff;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 8px;
 }
+.intro h2, p{
+    text-align: center;
+}
+
 /* Form styling with hover effect */
 form {
     max-width: 600px;
-    margin: 20px auto 20px auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 30px;
     background-color: #333;
     border-radius: 10px;
-    border: 2px solid #00ff7f;
+    border: 2px solid #00cc66;
 }
 
 form h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 15px;
     color: #ffffff;
-    border-bottom: 2px solid#00ff7f;
+    border-bottom: 2px solid #00cc66;
     padding-bottom: 5px;
 }
 
 form h3{
+    font-size: 1.1rem;
     color: #ffffff;
-    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 form label {
@@ -128,71 +140,82 @@ form label {
     color: #ffffff;
 }
 
+/*form inputs*/
 form input,
 form textarea,
 form select {
     display: block;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #00ff7f;
+    border: 1px solid #00cc66;
     border-radius: 5px;
     font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/*Form fu=ocus styles*/
 input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #00ff7f;
-    box-shadow: 0 2px 8px #00ff7f;
+    border-color: #00cc66;
+    box-shadow: 0 2px 8px #00cc66;
 }
 
 /* Grid layout for communication type option */
 #communication-type{
-    display: inline-grid;
-    grid-template-columns: 0fr 1fr;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
     border: none;
 }
 
 /* Button styling with hover effect */
 form button {
-    background-color: #ffffff;
+    display: block;
+    background-color: #00cc66;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
+    width: 100%;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
 
 form button:hover {
-    background-color: #00ff7f;
+    background-color: #00994d;
 }
 
 /* Box model demonstration (margin, padding, border) */
 .box-demo {
-  margin: 20px;
-  padding: 10px;
-  border: 3px solid #006d5b;
-  background-color: #f9f9f9;
+    margin: 30px;
+    padding: 20px;
+    border: 5px solid #00994d;
+    background-color: #f9f9f9;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Block vs inline elements */
 .block-example {
-  display: block;
-  width: 100%;
-  background-color: #444;
-  color: #fff;
-  margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .inline-example {
-  display: inline;
-  color: #f4ce14;
-  font-weight: bold;
-  border-bottom: 2px dashed #f4ce14;
+    display: inline;
+    color: #b38f00;
+    font-weight: bold;
+    border-bottom: 2px dashed #b38f00;
 }
 
 
@@ -211,12 +234,12 @@ th, td {
 
 thead{
     color: #ffffff;
-    background-color: grey;
+    background-color: #444;
 }
 
 tbody tr:hover {
-  background-color: #e6ffe6;
-  color: #222;
+    background-color: #00994d;
+    color: #ffffff;
 }
 img {
     max-width: 100%;
@@ -226,32 +249,52 @@ img {
 
 /* Projects section styling */
 .projects {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects section{
+    background: #f9f9f9;
+    border-radius: 8px;
     padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .projects img {
-    border: 2px solid #00ff7f;
+    border: 2px solid #00cc66;
     transition: transform 0.3s ease;
 }
 
-/*  Text and colour styling variety */
+/* Text and colour styling variety */
 h1, h2{
-  text-transform: uppercase;
-  font-family:Georgia, 'Times New Roman', Times, serif
+    text-transform: uppercase;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 p {
-  line-height: 1.6;
-  font-style: italic;
+    line-height: 1.6;
+    font-style: italic;
 }
 
-/* Footer styling with incorrect alignment */
+/* Footer styling with correct alignment */
 .footer {
-    background-color: #333;
-    color: #ffffff;
-    padding: 20px;
-    /* Wrong alignment */
     text-align: center;
+    font-size: 0.9rem;
+    background-color: #333;
+    color: #ccc;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 2px solid #00cc66;
 }

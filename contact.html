@@ -17,7 +17,7 @@
         </nav>
     </header>
 
-    <div>
+    <main>
         <form id="contactForm">
             <h2>Get In Touch</h2>
             <label for="Name">Name</label>
@@ -31,7 +31,7 @@
 
             <label for="Email">Email Address</label>
             <input
-                type="text"
+                type="email"
                 id="Email"
                 placeholder="Email"
                 required
@@ -50,18 +50,17 @@
                 type="tel"
                 id="Phone"
                 placeholder="Number"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                pattern="^\+?[0-9\s\-]{7,15}$"
                 required
             >
             <!-- Missing: labels, more input types, validation -->
 
-            <label for="Art" >Select an art</label>
+            <label for="Art" >Service Request</label>
             <select id="Art" name="Art" required>
-                <option value="Painting">Painting</option>
-                <option value="Music">Music</option>
-                <option value="Theater">Theater</option>
-                <option value="Sculpture">Architecture</option>
-                <option value="Film">Film</option>
+                <option value="Choose-a-service">Choose a service</option>
+                <option value="Website-Development">Website Development</option>
+                <option value="Graphic-Design">Graphic Design</option>
+                <option value="Mentorship">Mentorship</option>
             </select>
 
             <h3>Preferred method of communication</h3>
@@ -74,23 +73,13 @@
 
                 <input type="radio" name="communication" id="whatsapp" value="whatsapp">
                 <label for="whatsapp">WhatsApp </label>
-            </fieldset><br />
+            </fieldset>
             <button id="formBtn" type="submit">Send</button>
         </form>
-    </div>
+    </main>
 
     <footer class="footer">
-        <p>Contact me at email@example.com</p>
+        <p>Contact me at odirileMotshwaedi@dryvvater.com</p>
     </footer>
 </body>
 </html>
-<!--Painting: Adding color with brushes or tools to a flat surface like paper or canvas.
-Sculpture: Shaping hard materials like stone, wood, or metal into three-dimensional objects.
-Architecture: Designing and building physical structures and spaces for people to use.
-Literature: Expressing ideas, history, and stories through written or spoken words.
-Music: Arranging sounds, rhythm, and melody into an audio performance.
-Theater: Acting out stories live on a stage in front of a live audience.
-Film: Combining moving pictures, scripts, and sound to tell stories on a screen. 
-
-Contemporary Art Issue
- +4--> 
