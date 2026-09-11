@@ -101,8 +101,8 @@ portfolio-website/
 ●   Styled table
 ●   Navigation menu with hover states
 ●   Before/After comparison of at least one page.
-## Reflection
 
+## Reflection
 Debugging the starter code presented several challenges:
 ●  Multiple <!DOCTYPE html> errors due to incomplete markup.
 ●  Missing navigation across pages.

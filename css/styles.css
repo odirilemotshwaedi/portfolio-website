@@ -247,7 +247,7 @@ img {
     border-radius: 15px;
 }
 
-/* Projects section styling */
+/* Projects section styling with hover effects */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
