@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <meta name="description" content="Learn about Odirile Motshwaedi, a freelance web developer from South Africa specializing in HTML, CSS, and JavaScript. Experienced in responsive design, accessibility, and mentorship.">
+    <title>About | Odirile Motshwaedi Freelance Web Developer Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="header">
         <h1>About Me</h1>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html" aria-current="page">About</a>
             <a href="contact.html">Contact</a>
             <a href="projects.html">Projects</a>
         </nav>
     </header>
 
-    <main id="background">
+    <main id="background" role="main">
         <h2>My Background</h2>
         <p>I have been working in web development for several years.</p>
-
+        <p>My focus is on HTML, CSS, and JavaScript, with a passion for accessibility and responsive design.</p>
         <!--Skills table-->
-        <h3>Skills</h3>
         <table>
+            <caption>Overview of my web development skills</caption>
             <thead>
                 <tr>
-                    <th>Skills</th>
-                    <th>Good/Bad/Average</th>
+                    <th scope="col">Skills</th>
+                    <th scope="Col">Proficiency</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,17 +46,24 @@
                 </tr>
             </tbody>
         </table>
-        <p>HTML, CSS, JavaScript</p>
+
+        <!--My photo section-->
+        <section id="my-photo">
+            <h3>My Photo</h3>
+            <img
+                src="images/profile.jfif"
+                alt="Portrait of Odirile Motshwaedi, freelance web developer"
+                title="Profile photo"
+            >
+        </section>
     </main>
 
-    <!--My photo section-->
-    <section id="my-photo">
-        <h3>My Photo</h3>
-        <img src="images/profile.jfif" alt="Profile photo" title="Profile photo">
-    </section>
-
-    <footer class="footer">
-        <p>Contact me at odirileMotshwaedi@dryvvater.com</p>
+    <footer class="footer" aria-label="Contact information">
+        <p>Contact me at 
+            <a href="mailto:odirilemotshwaedi@dryvvater.com"
+            aria-label="Email Odirile Motshwaedi"
+            >odirilemotshwaedi@dryvvater.com</a>
+        </p>
     </footer>
 </body>
 </html>

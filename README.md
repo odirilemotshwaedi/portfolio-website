@@ -28,6 +28,7 @@ This project is a personal portfolio website designed to showcase my skills, pro
 12. Hero image lacked width constraints.
 13. Inconsistent spacing and alignment.
 14. No responsive adjustments in CSS.
+15. Inconsistencies in the formatting and indentation of the pages.
 
 ## Fixes implemented
 

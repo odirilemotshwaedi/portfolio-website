@@ -3,41 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <meta name="description" content="Explore Odirile Motshwaedi's portfolio projects including responsive websites, e-commerce platforms, and restaurant booking sites. Freelance web developer specializing in HTML, CSS, and JavaScript with a focus on accessibility and modern design.">
+    <title>Projects | Odirile Motshwaedi Freelance Web Developer</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="header">
         <h1>My Projects</h1>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="projects.html">Projects</a>
+            <a href="projects.html" aria-current="page">Projects</a>
         </nav>
     </header>
 
     <!--Projects image section-->
-    <main class="projects">
-        <section>
-            <h2>Project 1</h2>
-            <img src="images/project1.png" alt="Screenshot of Project 1 responsive website">
-            <p>A responsive website built with HTML and CSS.</p>
-        </section>
-        <section>
-            <h2>Project 2</h2>
-            <img src="images/project2.png" alt="Screenshot of Project 2 e-commerce website">
-            <p>An e-commerce site with modern design.</p>
-        </section>
-         <section>
-            <h2>Project 3</h2>
-            <img src="images/project3.png" alt="A restaurant website for reserving a table">
-            <p>A restaurant website for reserving a table.</p>
-        </section>
+    <main class="projects" role="main">
+        <article>
+            <h2>Responsive Jewellery Website</h2>
+            <img src="images/project1.png" alt="Responsive jewelry company website screenshot with flexible layout and elegant design.">
+            <p>A responsive website built with HTML and CSS, optimized for a jewelry company with mobile‑first design and accessibility features.</p>
+        </article>
+        <article>
+            <h2>Car Wash E-commerce Platform</h2>
+            <img src="images/project2.png" alt="Car wash e-commerce platform screenshot with modern design, secure checkout, and booking functionality.">
+            <p>An e-commerce site with modern design, secure checkout, and online car wash booking functionality built with HTML, CSS, and JavaScript.</p>
+        </article>
+         <article>
+            <h2>Restaurant Reservation Website</h2>
+            <img src="images/project3.png" alt="Restaurant reservation website screenshot with responsive design and online table booking feature.">
+            <p>A restaurant website featuring online table reservations, responsive design for mobile users, and accessible navigation.</p>
+        </article>
     </main>
 
-    <footer class="footer">
-        <p>Contact me at odirileMotshwaedi@dryvvater.com</p>
+    <footer class="footer" aria-label="Contact information">
+        <p>Contact me at 
+            <a href="mailto:odirilemotshwaedi@dryvvater.com"
+            aria-label="Email Odirile Motshwaedi"
+            >odirilemotshwaedi@dryvvater.com</a>
+        </p>
     </footer>
 </body>
 </html>

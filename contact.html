@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <meta name="description" content="Contact Odirile Motshwaedi, freelance web developer specializing in HTML, CSS, and JavaScript. Reach out for responsive design, mentorship, or coding lessons via email, phone, WhatsApp, or the contact form.">
+    <title>Contact | Odirile Motshwaedi Freelance Web Developer & Mentor</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="header">
         <h1>Contact Me</h1>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" aria-current="page">Contact</a>
             <a href="projects.html">Projects</a>
         </nav>
     </header>
 
-    <main>
+    <main role="main">
         <form id="contactForm">
             <h2>Get In Touch</h2>
             <label for="Name">Name</label>
@@ -27,22 +28,23 @@
                 placeholder="Name"
                 required
                 minlength="2"
+                aria-required="true"
             >
-
             <label for="Email">Email Address</label>
             <input
                 type="email"
                 id="Email"
                 placeholder="Email"
                 required
+                aria-required="true"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             >
-
             <label for="Message">Message</label>
             <textarea
                 id="Message"
                 placeholder="Message"
                 required
+                aria-required="true"
             ></textarea>
 
             <label for="tel">Phone/Whatsapp Number</label>
@@ -52,35 +54,58 @@
                 placeholder="Number"
                 pattern="^\+?[0-9\s\-]{7,15}$"
                 required
+                aria-required="true"
             >
             <!--more input types, validation -->
-
+            <!--Type of service option-->
             <label for="Art" >Service Request</label>
-            <select id="Art" name="Art" required>
+            <select id="Art" name="Art" required aria-required="true">
                 <option value="">Choose a service</option>
                 <option value="Website-Development">Website Development</option>
                 <option value="Graphic-Design">Graphic Design</option>
                 <option value="Mentorship">Mentorship</option>
             </select>
-
+            
             <!--Radio box for method of communication-->
-            <h3>Preferred method of communication</h3>
             <fieldset id="communication-type">
-                <input type="radio" name="communication" id="email" value="email" checked>
+            <legend>Preferred method of communication</legend>
+                <input
+                    type="radio"
+                    name="communication"
+                    id="email"
+                    value="email"
+                    checked>
                 <label for="email">Email</label>
 
-                <input type="radio" name="communication" id="phone" value="phone">
+                <input
+                    type="radio"
+                    name="communication"
+                    id="phone"
+                    value="phone">
                 <label for="phone">Phone</label>
 
-                <input type="radio" name="communication" id="whatsapp" value="whatsapp">
+                <input
+                    type="radio"
+                    name="communication"
+                    id="whatsapp"
+                    value="whatsapp">
                 <label for="whatsapp">WhatsApp </label>
             </fieldset>
-            <button id="formBtn" type="submit">Send</button>
+
+            <button
+                id="formBtn"
+                type="submit"
+                aria-label="Send contact form"
+            >Send</button>
         </form>
     </main>
 
-    <footer class="footer">
-        <p>Contact me at odirileMotshwaedi@dryvvater.com</p>
+    <footer class="footer" aria-label="Contact information">
+        <p>Contact me at 
+            <a href="mailto:odirilemotshwaedi@dryvvater.com"
+            aria-label="Email Odirile Motshwaedi"
+            >odirilemotshwaedi@dryvvater.com</a>
+        </p>
     </footer>
 </body>
 </html>

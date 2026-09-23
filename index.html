@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio of Odirile Motshwaedi, freelance web developer in South Africa specializing in HTML, CSS, and JavaScript. Passionate about creating accessible, modern websites.">
+    <title>Odirile Motshwaedi | Freelance Web Developer Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="header">
         <h1>My Portfolio</h1>
         <!-- Navigation-->
-        <nav>
+        <nav aria-label="Main Navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -19,20 +20,29 @@
     </header>
 
     <!--Hero section including hero image-->
-    <main class="hero">
+    <main class="hero" role="main">
         <h2>Welcome to Odirile's Portfolio</h2>
         <p>I am a web developer passionate about creating beautiful websites. </p>
-        <p>You vision it. I bring it to life.</p>
-        <img src="images/hero.jpg" alt="Hero-image" title="Hero image">
+        <p>You envision it. I bring it to life.</p>
+        <img
+            src="images/hero.jpg"
+            alt="Hero banner showcasing web development portfolio with modern design elements"
+            title="Hero image"
+        >
     </main>
 
+    <!--Intro section with a brief description about the developer-->
     <section class="intro">
         <h2>About Me</h2>
         <p>I am Odirile Motshwaedi, I am a freelace website developer. I specialize in HTML, CSS and Javascript. In my spare time, I do probono coding lessons for schools and universities in need, some times i do extra private classes for students which comes at a cost. I provide mentorships as well and aside all this I am a self employed website developer based in the North West.</p>
     </section>
 
-    <footer class="footer">
-        <p>Contact me at odirileMotshwaedi@dryvvater.com</p>
+    <footer class="footer" aria-label="Contact information">
+        <p>Contact me at
+            <a href="mailto:odirilemotshwaedi@dryvvater.com"
+            aria-label="Email Odirile Motshwaedi"
+            >odirilemotshwaedi@dryvvater.com</a>
+        </p>
     </footer>
 </body>
 </html>

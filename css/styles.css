@@ -9,7 +9,7 @@ body {
 /* Header styling with missing alignment */
 .header {
     background-color: #222;
-    color: #f0f0f0;
+    color: #ffffff;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -31,17 +31,24 @@ nav{
 }
 
 nav a{
-    color: #f0f0f0;
-    text-align: right;
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     padding: 10px 14px;
     border-radius: 4px;
 }
 
 /* Pseudo-classes*/
-nav a:active {
-  color: #00994d;
+nav a:active,
+nav a:hover{
+    color: #006633;
+    background-color: #111111;
+}
+
+nav a:focus {
+    outline: 2px solid #00cc66;
+    outline-offset: 2px;
+    background-color: #111111;;
 }
 
 /*About styling*/
@@ -81,12 +88,13 @@ nav a:active {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    color: #111;
+    color: #222;
 }
 
 .hero h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #111;
 }
 
 .hero img{
@@ -100,21 +108,24 @@ nav a:active {
 .intro {
     padding: 30px;
     background-color: #444;
-    color: #ffffff;
+    color: #f0f0f0;
     max-width: 800px;
     margin: 40px auto;
     border-radius: 8px;
 }
-.intro h2, p{
+
+.intro h2,
+.intro p {
     text-align: center;
 }
 
 /* Form styling with hover effect */
 form {
+    color: #f0f0f0;
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #333;
+    background-color: #222;
     border-radius: 10px;
     border: 2px solid #00cc66;
 }
@@ -137,7 +148,7 @@ form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #ffffff;
+    color: #f0f0f0;
 }
 
 /*form inputs*/
@@ -174,7 +185,7 @@ select:focus {
 /* Button styling with hover effect */
 form button {
     display: block;
-    background-color: #00cc66;
+    background-color: #006633;
     font-weight: bold;
     color: #ffffff;
     width: 100%;
@@ -187,14 +198,16 @@ form button {
 }
 
 form button:hover {
-    background-color: #00994d;
+    background-color: #00cc66;
+    color: #000000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 /* Box model demonstration (margin, padding, border) */
 .box-demo {
     margin: 30px;
     padding: 20px;
-    border: 5px solid #00994d;
+    border: 5px solid #00cc66;
     background-color: #f9f9f9;
     text-align: center;
     max-width: 400px;
@@ -234,13 +247,15 @@ th, td {
 
 thead{
     color: #ffffff;
-    background-color: #444;
+    background-color: #222;
 }
 
 tbody tr:hover {
-    background-color: #00994d;
+    background-color: #006633;
     color: #ffffff;
+    border-left: 4px solid #00cc66; 
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -257,16 +272,24 @@ img {
     margin: 0 auto;
 }
 
-.projects section{
+.projects article{
     background: #f9f9f9;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.projects section:hover {
+.projects h2{
+    text-align: center;
+    color: #111;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.projects article:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
@@ -274,6 +297,17 @@ img {
 .projects img {
     border: 2px solid #00cc66;
     transition: transform 0.3s ease;
+}
+
+.projects img:hover {
+    transform: scale(1.05); 
+}
+
+.projects p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
 /* Text and colour styling variety */
@@ -291,8 +325,8 @@ p {
 .footer {
     text-align: center;
     font-size: 0.9rem;
-    background-color: #333;
-    color: #ccc;
+    background-color: #222;
+    color: #f0f0f0;
     padding: 30px 20px;
     max-width: 1200px;
     margin: 0 auto;
