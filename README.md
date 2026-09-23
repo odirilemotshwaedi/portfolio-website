@@ -16,19 +16,21 @@ This project is a personal portfolio website designed to showcase my skills, pro
 ## Issues Found
 1. Missing viewport meta element on all pages.
 2. <html> tag lacked lang="en".
-3. Image tags missing descriptive title attributes.
+3. Missing <meta charset="UTF-8"> and <meta name="description">
 4. Navigation missing across pages.
 5. Images without alt text.
 6. Form input types incorrect (e.g., email set as text).
 7. Labels missing for inputs; radio and select elements not grouped properly.
 8. Button type attribute not set.
-9. Missing <meta charset="UTF-8"> on some pages.
+9. Image tags missing descriptive title attributes.
 10. Poor color contrast.
 11. Footer alignment issues.
 12. Hero image lacked width constraints.
 13. Inconsistent spacing and alignment.
 14. No responsive adjustments in CSS.
-15. Inconsistencies in the formatting and indentation of the pages.
+15. Added validations to enforce correct input formats.
+16. Inconsistencies in the formatting and indentation of the pages.
+17. No Aria attributes were included to improve accessibility
 
 ## Fixes implemented
 
@@ -76,7 +78,7 @@ portfolio-website/
 ├── about.html
 ├── projects.html
 ├── contact.html
-├── CSS/
+├── css/
 │   └── styles.css
 ├── images/
 │   ├── hero.jpg
