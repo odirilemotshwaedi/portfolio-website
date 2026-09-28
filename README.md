@@ -73,7 +73,7 @@ I used a simplified HTML5 structure with semantic tags (header, main, nav, secti
 
 - Structure
 portfolio-website/
-│v byh
+│
 ├── index.html
 ├── about.html
 ├── projects.html

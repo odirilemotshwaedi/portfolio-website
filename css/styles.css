@@ -47,8 +47,14 @@ nav a:focus{
 }
 
 nav a:focus {
-    outline: 2px solid #00cc66;
-    outline-offset: 2px;
+    outline: 3px solid #00cc66;
+    outline-offset: 3px;
+}
+
+nav a:focus-visible,
+form button:focus-visible {
+    outline: 3px solid #00cc66;
+    outline-offset: 3px;
 }
 
 /*About styling*/
@@ -174,14 +180,6 @@ select:focus {
     box-shadow: 0 2px 8px #00cc66;
 }
 
-/* Grid layout for communication type option */
-#communication-type{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
-    border: none;
-}
-
 /* Button styling with hover effect */
 form button {
     display: block;
@@ -206,6 +204,14 @@ form button:hover {
 form button:focus{
     outline: 2px solid #00cc66;
     outline-offset: 2px;
+}
+
+/* Grid layout for communication type option */
+#communication-type{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    border: none;
 }
 
 /* Box model demonstration (margin, padding, border) */
@@ -235,7 +241,6 @@ form button:focus{
     font-weight: bold;
     border-bottom: 2px dashed #b38f00;
 }
-
 
 /* Table styling with hover effect */
 table {
@@ -296,7 +301,7 @@ img {
 
 .projects article:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .projects img {
