@@ -13,39 +13,66 @@ This project is a personal portfolio website designed to showcase my skills, pro
 - design/ – Wireframe and issues documentation.
 - screenshots/ – Screenshots of completed pages.
 
-## Issues Found
-1. Missing viewport meta element on all pages.
-2. <html> tag lacked lang="en".
-3. Missing <meta charset="UTF-8"> and <meta name="description">
-4. Navigation missing across pages.
-5. Images without alt text.
-6. Form input types incorrect (e.g., email set as text).
-7. Labels missing for inputs; radio and select elements not grouped properly.
-8. Button type attribute not set.
-9. Image tags missing descriptive title attributes.
-10. Poor color contrast.
-11. Footer alignment issues.
-12. Hero image lacked width constraints.
-13. Inconsistent spacing and alignment.
-14. No responsive adjustments in CSS.
-15. Added validations to enforce correct input formats.
-16. Inconsistencies in the formatting and indentation of the pages.
-17. No Aria attributes were included to improve accessibility
+## Issues Identified
+
+During the website review, 17 issues were identified across HTML structure, accessibility, CSS styling, responsiveness, and form validation.
+
+### A. HTML Structure and Metadata
+1. **Missing viewport meta element:** All pages lacked the viewport meta element required for appropriate rendering on mobile devices.
+2. **Missing language declaration:** The `<html>` element did not include the `lang="en"` attribute, making it difficult for assistive technologies to determine the page language.
+3. **Incomplete document metadata:** Pages lacked essential metadata, including `<meta charset="UTF-8">` and descriptive meta descriptions.
+4. **Missing navigation consistency:** Navigation menus were missing or inconsistently implemented across the website pages.
+5. **Incorrect form input types:** Some form fields used inappropriate input types, such as `type="text"` instead of `type="email"` for email addresses.
+6. **Incorrect form structure:** Form inputs lacked properly associated labels, while radio buttons and related selection controls were not logically grouped.
+7. **Missing button type attributes:** Buttons did not explicitly specify their types, potentially resulting in unintended form-submission behaviour.
+
+### B. Accessibility Issues
+8. **Missing alternative text:** Some images lacked descriptive `alt` attributes, reducing accessibility for users relying on screen readers.
+9. **Insufficient colour contrast:** Certain foreground and background colour combinations did not provide sufficient contrast, affecting readability.
+10. **Insufficient ARIA enhancements:** Appropriate ARIA attributes and accessible relationships were missing where native HTML semantics alone did not adequately communicate the purpose or relationships of interface elements.
+
+### C. CSS and Responsive Design Issues
+11. **Footer alignment problems:** Footer content was inconsistently aligned, affecting the overall visual presentation.
+12. **Unconstrained hero image:** The hero image lacked appropriate width constraints, potentially causing overflow or inconsistent presentation.
+13. **Inconsistent spacing and alignment:** Margins, padding, and element alignment varied across pages, resulting in an inconsistent layout.
+14. **Lack of responsive styling:** CSS lacked sufficient responsive adjustments to ensure the website displayed correctly across different screen sizes.
+
+### D. Form Validation and Code Quality
+
+15. **Insufficient form validation:** Form fields lacked appropriate validation rules to help enforce valid input formats and prevent invalid submissions.
+16. **Inconsistent code formatting:** HTML pages contained inconsistent indentation, spacing, and formatting, reducing readability and maintainability.
+17. **Inconsistent accessibility implementation:** Accessibility features were not consistently applied across pages, including accessible names, semantic relationships, and appropriate ARIA attributes where necessary.
 
 ## Fixes implemented
 
-- Added lang="en" and <meta charset="UTF-8"> to all pages.
-- Standardized navigation with <nav> and Flexbox alignment.
-- Corrected form input types and added HTML5 validation.
-- Linked labels to inputs; grouped communication options with <fieldset>.
-- Added descriptive alt attributes to all images.
-- Introduced a styled table using <thead> and <tbody> with hover effects.
-- Implemented Flexbox and CSS Grid for responsive layouts; added media queries for smaller screens.
-- Improved color contrast and focus states for accessibility.
-- Validated HTML and CSS using W3C tools to catch structural errors.
+The following improvements were made to address the identified issues:
+
+- Added lang="en" and <meta charset="UTF-8"> declarations to all HTML pages.
+- Added viewport metadata and descriptive meta descriptions.
+- Standardised navigation across the website using semantic <nav> elements and Flexbox alignment.
+- Corrected form input types and introduced appropriate HTML5 validation attributes.
+- Associated form labels with their respective inputs.
+- Grouped related communication options using <fieldset> and <legend>.
+- Added appropriate alternative text to informative images.
+- Improved the table structure using <thead> and <tbody>, together with CSS styling and hover effects.
+- Implemented Flexbox and CSS Grid to improve layout consistency and responsiveness.
+- Added media queries to accommodate smaller screen sizes.
+- Improved colour contrast and keyboard focus indicators.
+-Corrected spacing, alignment, and image sizing.
+- Improved HTML and CSS formatting for readability and maintainability.
+- Validated the HTML and CSS using W3C validation tools to identify and correct structural and styling errors.
 
 ## Description
-I used a simplified HTML5 structure with semantic tags (header, main, nav, section, footer) instead of unnecessary <div> elements. Headings (h2, h3) and paragraphs (p) were kept minimal. On the Projects page, <section> elements separate and style each project.
+The website uses a simplified HTML5 structure with semantic elements instead of relying unnecessarily on generic <div> elements.
+
+The main structural elements include:
+- <header> – Contains the website header and branding.
+- <nav> – Provides navigation links between pages.
+- <main> – Contains the primary content of each page.
+- <section> – Groups related content into meaningful sections.
+- <footer> – Contains footer information.
+
+Headings and paragraphs are organised hierarchically to improve readability and document structure. On the Projects page, individual project sections are organised using appropriate semantic elements to separate and present each project clearly.
 
 ## Explanation of CSS approach
 - Flexbox for aligning headers and navigation.
@@ -106,10 +133,19 @@ portfolio-website/
 ●   Before/After comparison of at least one page.
 
 ## Reflection
-Debugging the starter code presented several challenges:
-●  Multiple <!DOCTYPE html> errors due to incomplete markup.
-●  Missing navigation across pages.
-●  Incorrect form input types and lack of validation.
-●  Overuse of <div> instead of semantic HTML5 tags.
-●  CSS lacked hover states, alignment, and responsiveness.
-Validation tools helped identify subtle errors, and testing confirmed hover and input states worked correctly.
+Reviewing and improving the starter code presented several challenges.
+
+Some of the main issues encountered included:
+- Incomplete HTML markup and document structure.
+- Missing or inconsistent navigation across pages.
+- Incorrect form input types and insufficient validation.
+- Overuse of generic <div> elements instead of appropriate semantic HTML5 elements.
+- Inconsistent CSS styling, spacing, and alignment.
+- Missing hover and keyboard focus states.
+- Limited responsiveness across different screen sizes.
+
+Working through these issues improved my understanding of semantic HTML, CSS layout techniques, responsive design, and web accessibility.
+
+Using HTML and CSS validation tools helped identify structural and styling errors. Testing the website across its pages also helped confirm that navigation, responsive layouts, hover effects, and form validation behaved as expected.
+
+Overall, this project strengthened my ability to identify website usability issues, improve accessibility, and create a more consistent and responsive user experience.

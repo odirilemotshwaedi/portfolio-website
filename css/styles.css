@@ -1,9 +1,36 @@
 /* General styling */
 body {
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
+    line-height: 1.6;
+}
+
+*{
+    box-sizing: border-box;
+}
+    
+.container {
+    width: min(100% - 40px, 1200px);
+    margin-inline: auto;
+}
+
+/* Standard section spacing */
+section {
+    margin-block: 40px;
+}
+
+/* Consistent heading spacing */
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Consistent paragraph spacing */
+section p {
+    margin-bottom: 16px;
+    line-height: 1.6;
 }
 
 /* Header styling with missing alignment */
@@ -14,6 +41,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     border-bottom: 3px solid #00cc66;
 }
 
@@ -35,63 +63,92 @@ nav a{
     text-decoration: none;
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 10px 14px;
+    border: 2px solid transparent;
     border-radius: 4px;
 }
 
-/* Pseudo-classes*/
-nav a:active,
-nav a:hover,
-nav a:focus{
-    color: #00cc66;
-    background-color: #1a1a1a;
+/*Visited links*/
+nav a:visited {
+    color: #d9f2e3;
 }
 
-nav a:focus {
-    outline: 3px solid #00cc66;
-    outline-offset: 3px;
+/*Hover state*/
+nav a:hover{
+    color: #ffffff;
+    background-color: #006633;
+    border-color: #00cc66;
 }
 
+/*Active page state*/
+nav a[aria-current="page"]{
+    background-color: #006633; 
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-weight: bold;
+}
+
+/*Keyboard focus state*/
 nav a:focus-visible,
 form button:focus-visible {
-    outline: 3px solid #00cc66;
-    outline-offset: 3px;
+    outline: 3px solid #ffcc00;
+    outline-offset: 4px;
+    background-color: #006633;
+    color: #ffffff;
+}
+
+/*Active link when pressed*/
+nav a:active{
+    background-color: #004d26;
+    color: #ffffff;
 }
 
 /*About styling*/
 #background {
-    padding: 50px;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 40px auto;
+    padding: 40px;
     color: #ffffff;
     background-color: #333;
     border: 2px solid #00cc66;
     border-radius: 10px;
-    margin: 20px;
 }
 
 /* Combination selectors*/
-#background p + h2 {
+#background h2 {
     margin-bottom: 15px;
     font-style: italic;
 }
 
 #my-photo {
-    background-color: #333;
+    text-align: center;
+    max-width: 600px;
+    background-color: #333333;
+    border: 2px solid #00cc66;
     border-radius: 10px;
-    color: #ffffff;
-    padding: 50px;
-    margin: 20px;
+    padding: 25px;
+    margin: 30px auto;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #background {
-    padding: 20px;
-  }
+#my-photo img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid #00cc66;
+}
+
+#my-photo figcaption {
+    color: #ffffff;
+    margin-top: 15px;
 }
 
 /* Hero styling*/
 .hero {
-    padding: 60px 20px;
+    padding: 60px 0px;
     max-width: 1200px;
+    width: calc(100% - 40px);
     margin: 0 auto;
     text-align: center;
     color: #222;
@@ -104,10 +161,11 @@ form button:focus-visible {
 }
 
 .hero img{
-    width: 100%;
     display: block;
+    width: 100%;
     margin: 0 auto;
     max-width: 800px;
+    height: auto;
 }
 
 /* Intro styling*/
@@ -129,8 +187,9 @@ form button:focus-visible {
 form {
     color: #f0f0f0;
     max-width: 600px;
+    width: calc(100% - 40px);
     margin: 40px auto;
-    padding: 30px;
+    padding: 35px 30px;
     background-color: #222;
     border-radius: 10px;
     border: 2px solid #00cc66;
@@ -138,7 +197,7 @@ form {
 
 form h2 {
     font-size: 1.4rem;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     color: #ffffff;
     border-bottom: 2px solid #00cc66;
     padding-bottom: 5px;
@@ -152,7 +211,7 @@ form h3{
 
 form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
     color: #f0f0f0;
 }
@@ -162,22 +221,59 @@ form input,
 form textarea,
 form select {
     display: block;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 8px;
     padding: 10px;
     border: 1px solid #00cc66;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
-    box-sizing: border-box;
+}
+
+/*helper text spacing*/
+form small {
+    display: block;
+    color: #f0f0f0;
+    font-size: 0.85rem;
+    margin-top: 0;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+/*valid form fields */
+form input:valid:not(:placeholder-shown),
+form textarea:valid:not(:placeholder-shown){
+    border: 2px solid #00cc66;
+}
+
+
+/*Invalid form fields */
+form input:invalid:not(:placeholder-shown),
+form textarea:invalid:not(:placeholder-shown){
+    border: 2px solid #ff8080;
+}
+
+/*Submission feedback*/
+#form-feedback {
+    font-weight: bold;
+    margin: 15px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*Textarea*/
+form textarea {
+    min-height: 140px;
+    resize: vertical;
 }
 
 /*Form focus styles*/
 input:focus,
 textarea:focus,
 select:focus {
-    outline: none;
-    border-color: #00cc66;
-    box-shadow: 0 2px 8px #00cc66;
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+    border-color: #006633;
 }
 
 /* Button styling with hover effect */
@@ -190,28 +286,101 @@ form button {
     border: none;
     padding: 12px 24px;
     border-radius: 6px;
-    cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
-form button:hover {
+/*form button hover*/
+form button:hover:not(:disabled) {
     background-color: #00cc66;
     color: #000000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-form button:focus{
-    outline: 2px solid #00cc66;
-    outline-offset: 2px;
+/*Form button keyboard focus*/
+form button:focus-visible{
+    outline: 3px solid #ffcc00;
+    outline-offset: 4px;
+}
+
+/*Form button pressed*/
+form button:active:not(:disabled){
+    background-color: #004d26;
+    color: #ffffff;
+}
+
+/*Focused form fields*/
+form input:focus-visible,
+form textarea:focus-visible,
+form select:focus-visible{
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
+    border-color: #ffffff;
+}
+
+/* Disabled form fields */
+form input:disabled,
+form textarea:disabled,
+form select:disabled,
+form button:disabled {
+    background-color: #555555;
+    color: #ffffff;
+    border: 1px solid #999999;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* Required fields */
+form input:required,
+form textarea:required {
+    border-left: 4px solid #00cc66;
+}
+
+/* Checked checkboxes */
+input[type="checkbox"]:checked {
+    accent-color: #00cc66;
+}
+
+/* Placeholder styling */
+form input::placeholder,
+form textarea::placeholder {
+    color: #666666;
+    opacity: 1;
+}
+
+/* Selection styling */
+::selection {
+    background-color: #006633;
+    color: #ffffff;
 }
 
 /* Grid layout for communication type option */
 #communication-type{
+    margin: 15px 0 25px;
+    padding: 15px;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 10px;
-    border: none;
+    gap: 12px;
+    align-items: center;
+}
+
+#communication-type legend {
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+/*Radio buttons*/
+#communication-type input[type="radio"]{
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#communication-type label {
+    margin: 0;
+}
+
+#communication-type input[type="radio"]:checked {
+    accent-color: #00cc66;
 }
 
 /* Box model demonstration (margin, padding, border) */
@@ -251,19 +420,52 @@ table {
 
 th, td {
     border: 1px solid #222222;
-    padding: 8px;
+    padding: 12px;
     text-align: left;
 }
 
 thead{
     color: #ffffff;
-    background-color: #222;
+    background-color: #222222;
 }
 
+
+/*Altering table rows*/
+tbody tr:nth-child(odd) {
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Highlight hovered rows */
 tbody tr:hover {
-    background-color: #00cc66;
+    background-color: #006633;
     color: #ffffff;
-    border-left: 4px solid #00cc66; 
+}
+
+tbody tr:hover th,
+tbody tr:hover td {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* Highlight the first row */
+tbody tr:first-child {
+    font-weight: bold;
+}
+
+/* Style the last row */
+tbody tr:last-child {
+    border-bottom: 3px solid #006633;
+}
+
+/* Highlight every third row */
+tbody tr:nth-child(3n) {
+    border-left: 4px solid #006633;
 }
 
 img {
@@ -272,13 +474,24 @@ img {
     border-radius: 15px;
 }
 
+figure{
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 10px;
+}
+
 /* Projects section styling with hover effects */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100px, 300px), 1fr));
     gap: 30px;
-    padding: 40px;
     max-width: 1200px;
+    width: calc(100% - 40px);
+    padding: 40px 0;
     margin: 0 auto;
 }
 
@@ -289,7 +502,6 @@ img {
     text-align: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
 .projects h2{
@@ -297,11 +509,6 @@ img {
     color: #111;
     margin-bottom: 10px;
     font-size: 1.25rem;
-}
-
-.projects article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .projects img {
@@ -320,15 +527,41 @@ img {
     line-height: 1.5;
 }
 
+.projects article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* First project */
+.projects article:first-child {
+    border-top: 4px solid #006633;
+}
+
+/* Last project */
+.projects article:last-child {
+    border-bottom: 4px solid #006633;
+}
+
+/* Alternating project cards */
+.projects article:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+/* Keyboard accessibility */
+.projects article:focus-visible {
+    outline: 3px solid #006633;
+    outline-offset: 4px;
+}
+
 /* Text and colour styling variety */
-h1, h2{
+h1, 
+h2{
     text-transform: uppercase;
     font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 p {
     line-height: 1.6;
-    font-style: italic;
 }
 
 /* Footer styling with correct alignment */
@@ -338,7 +571,92 @@ p {
     background-color: #222;
     color: #f0f0f0;
     padding: 30px 20px;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     border-top: 2px solid #00cc66;
+}
+
+/* Footer email link */
+.footer a {
+    color: #00cc66;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer a:focus-visible {
+    outline: 3px solid #ffcc00;
+    outline-offset: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .header{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav{
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #background {
+        width: calc(100% - 24px);
+        padding: 20px;
+        margin: 12px auto;
+    }
+
+    #my-photo{
+        padding: 15px;
+    }
+
+    form {
+        width: calc(100% - 24px);
+        padding: 25px 18px;
+        margin: 20px 12px;
+    }
+
+    #communication-type {
+        padding: 10px;
+        gap: 10px;
+    }
+
+   .projects {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 300px), 1fr)
+    );
+    gap: 30px;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    padding: 40px 0;
+    margin: 0 auto;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    table{
+        font-size: 0.9rem;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Odirile Motshwaedi, freelance web developer specializing in HTML, CSS, and JavaScript. Reach out for responsive design, mentorship, or coding lessons via email, phone, WhatsApp, or the contact form.">
+
+    <meta
+        name="description"
+        content="Contact Odirile Motshwaedi, freelance web developer specializing in HTML, CSS, and JavaScript. Reach out for responsive design, mentorship, or coding lessons via email, phone, WhatsApp, or the contact form."
+    >
+
     <title>Contact | Odirile Motshwaedi Freelance Web Developer & Mentor</title>
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
     <header class="header">
         <h1>Contact Me</h1>
+
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -18,96 +27,177 @@
         </nav>
     </header>
 
-    <main role="main">
+    <main class="contact">
+
         <form id="contactForm">
+
             <h2>Get In Touch</h2>
-            <label for="Name">Name</label>
+
+            <!-- Name field -->
+            <label for="name">Name</label>
+
             <input
                 type="text"
-                id="Name"
-                placeholder="Name"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
                 required
                 minlength="2"
-                aria-required="true"
+                maxlength="50"
+                aria-describedby="name-help"
             >
-            <label for="Email">Email Address</label>
+
+            <small id="name-help">
+                Enter 2 to 50 characters.
+            </small>
+
+            <!-- Email field -->
+            <label for="email">Email Address</label>
+
             <input
                 type="email"
-                id="Email"
-                placeholder="Email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
                 required
-                aria-required="true"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                aria-describedby="email-help"
             >
-            <label for="Message">Message</label>
+
+            <small id="email-help">
+                Enter a valid email address.
+            </small>
+
+            <!-- Message field -->
+            <label for="message">Message</label>
+
             <textarea
-                id="Message"
-                placeholder="Message"
+                id="message"
+                name="message"
+                placeholder="Write your message"
                 required
-                aria-required="true"
+                minlength="10"
+                maxlength="1000"
+                rows="5"
+                aria-describedby="message-help"
             ></textarea>
 
-            <label for="tel">Phone/Whatsapp Number</label>
+            <small id="message-help">
+                Your message must contain 10 to 1000 characters.
+            </small>
+
+            <!-- Phone field -->
+            <label for="tel">Phone/WhatsApp Number</label>
+
             <input
                 type="tel"
                 id="tel"
-                placeholder="Number"
-                inputmode="tel";
-                pattern="^\+?[0-9\s\-]{7,15}$"
+                name="phone"
+                placeholder="Enter your number"
+                autocomplete="tel"
+                inputmode="tel"
+                pattern="^\+?[0-9\s()-]{7,20}$"
                 required
-                aria-required="true"
+                aria-describedby="phone-help"
             >
-            <!--more input types, validation -->
-            <!--Type of service option-->
-            <label for="Art" >Service Request</label>
-            <select id="Art" name="Art" required aria-required="true">
+
+            <small id="phone-help">
+                Enter a phone number using digits, spaces, brackets,
+                or hyphens. You may include a leading +.
+            </small>
+
+            <!-- Service selection -->
+            <label for="service">Service Request</label>
+
+            <select
+                id="service"
+                name="service"
+                required
+                aria-describedby="service-help"
+            >
                 <option value="">Choose a service</option>
-                <option value="Website-Development">Website Development</option>
-                <option value="Graphic-Design">Graphic Design</option>
-                <option value="Mentorship">Mentorship</option>
+                <option value="Website-Development">
+                    Website Development
+                </option>
+                <option value="Graphic-Design">
+                    Graphic Design
+                </option>
+                <option value="Mentorship">
+                    Mentorship
+                </option>
             </select>
-            
-            <!--Radio box for method of communication-->
+
+            <small id="service-help">
+                Select the service you are interested in.
+            </small>
+
+            <!-- Preferred communication method -->
             <fieldset id="communication-type">
-            <legend>Preferred method of communication</legend>
+
+                <legend>Preferred method of communication</legend>
+
                 <input
                     type="radio"
                     name="communication"
-                    id="email"
+                    id="communication-email"
                     value="email"
-                    checked>
-                <label for="email">Email</label>
+                    checked
+                >
+
+                <label for="communication-email">Email</label>
 
                 <input
                     type="radio"
                     name="communication"
-                    id="phone"
-                    value="phone">
-                <label for="phone">Phone</label>
+                    id="communication-phone"
+                    value="phone"
+                >
+
+                <label for="communication-phone">Phone</label>
 
                 <input
                     type="radio"
                     name="communication"
-                    id="whatsapp"
-                    value="whatsapp">
-                <label for="whatsapp">WhatsApp </label>
+                    id="communication-whatsapp"
+                    value="whatsapp"
+                >
+
+                <label for="communication-whatsapp">WhatsApp</label>
+
             </fieldset>
 
+            <!-- Submission feedback -->
+            <p
+                id="form-feedback"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+            ></p>
+
+            <!-- Submit button -->
             <button
                 id="formBtn"
                 type="submit"
-                aria-label="Send contact form"
-            >Send</button>
+            >
+                Send
+            </button>
+
         </form>
+
     </main>
 
-    <footer class="footer" aria-label="Contact information">
-        <p>Contact me at 
-            <a href="mailto:odirilemotshwaedi@dryvvater.com"
-            aria-label="Email Odirile Motshwaedi"
-            rel="noopener noreferrer"
-            >odirilemotshwaedi@dryvvater.com</a>
+    <footer class="footer">
+        <p>
+            Contact me at
+            <a
+                href="mailto:odirilemotshwaedi@dryvvater.com"
+                aria-label="Email Odirile Motshwaedi"
+            >
+                odirilemotshwaedi@dryvvater.com
+            </a>
         </p>
     </footer>
+
 </body>
 </html>

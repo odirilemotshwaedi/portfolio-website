@@ -10,6 +10,7 @@
 <body>
     <header class="header">
         <h1>About Me</h1>
+
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html" aria-current="page">About</a>
@@ -18,53 +19,62 @@
         </nav>
     </header>
 
-    <main id="background" role="main">
-        <h2>My Background</h2>
-        <p>I have been working in web development for several years.</p>
-        <p>My focus is on HTML, CSS, and JavaScript, with a passion for accessibility and responsive design.</p>
+    <main id="background">
+        <section aria-labelledby="background-heading">
+            <h2>My Background</h2>
+            <p>I have been working in web development for several years.</p>
+            <p>My focus is on HTML, CSS, and JavaScript, with a passion for accessibility and responsive design.</p>
+        </section>
         <!--Skills table-->
-        <table>
-            <caption>Overview of my web development skills</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Skills</th>
-                    <th scope="Col">Proficiency</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">HTML</td>
-                    <td>Good</td>
-                </tr>
-                <tr>
-                    <td scope="row">CSS</td>
-                    <td>Average</td>
-                </tr>
-                <tr>
-                    <td scope="row">JavaScript</td>
-                    <td>Good</td>
-                </tr>
-            </tbody>
-        </table>
+        <section aria-labelledby="skills-heading">
+            <h2 id="skills-heading">My Skills</h2>
+            <table>
+                <caption>Overview of my web development skills</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Skills</th>
+                        <th scope="col">Proficiency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">HTML</th>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CSS</th>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">JavaScript</th>
+                        <td>Advanced</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
         <!--My photo section-->
-        <figure id="my-photo">
-            <h3>My Photo</h3>
-            <img
-                src="images/profile.jfif"
-                alt="Portrait of Odirile Motshwaedi, freelance web developer"
-                title="Profile photo"
-            >
-            <figcaption>Odirile Motshwaedi — Freelance Web Developer</figcaption>
-        </figure>
+        <section aria-labelledby="photo-heading">
+            <figure id="my-photo">
+                <h3>My Photo</h3>
+                <img
+                    src="images/profile.jfif"
+                    alt="Portrait of Odirile Motshwaedi, freelance web developer"
+                >
+                <figcaption>Odirile Motshwaedi — Freelance Web Developer</figcaption>
+            </figure>
+        </section>
     </main>
 
-    <footer class="footer" aria-label="Contact information">
-        <p>Contact me at 
-            <a href="mailto:odirilemotshwaedi@dryvvater.com"
-            aria-label="Email Odirile Motshwaedi"
-            rel="noopener noreferrer"
-            >odirilemotshwaedi@dryvvater.com</a>
+    <footer class="footer">
+        <p>
+            Contact me at 
+            <a 
+                href="mailto:odirilemotshwaedi@dryvvater.com"
+                aria-label="Email Odirile Motshwaedi"
+            >
+            odirilemotshwaedi@dryvvater.com
+            </a>
         </p>
     </footer>
 </body>
